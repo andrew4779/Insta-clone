@@ -24,6 +24,15 @@ import cloudinary.api
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+# setting up cloudinary
+# adding config
+cloudinary.config( 
+  cloud_name = "dv5kkzgqy", 
+  api_key = "132249491479223", 
+  api_secret = "JorPJSDD7y84_8p_ELkEvGOVnnU" 
+)
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -45,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_registration',
     'app.apps.AppConfig',
     'cloudinary'
 ]
