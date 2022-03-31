@@ -13,6 +13,13 @@ import os
 from pathlib import Path
 
 
+
+# cloudinary
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -39,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -78,7 +86,10 @@ WSGI_APPLICATION = 'instagram.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'instaclone',
+        'USER': 'andrew',
+        'PASSWORD': 'instaclone123'
+
     }
 }
 
