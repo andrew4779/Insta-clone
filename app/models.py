@@ -10,7 +10,7 @@ from django.db.models.fields import related
 # image model
 class Image(models.Model):
     user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='images')
+    User, on_delete=models.CASCADE, related_name='images')
     image = CloudinaryField('image')
     image_name = models.CharField(max_length=50)
     image_caption = models.TextField()
@@ -103,13 +103,3 @@ class Comments(models.Model):
 
     def __str__(self):
         return self.comment
-
-
-
-# follow model
-# class Follow(models.Model):
-#     user = models.ForeignKey(User, on_delete=models.CASCADE)
-#     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
-
-#     def __str__(self):
-#         return self.user.username
