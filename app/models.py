@@ -80,7 +80,6 @@ class Profile(models.Model):
     def __str__(self):
         return self.user.username
 
-
 # likes model
 class Likes(models.Model):
     image = models.ForeignKey(Image, on_delete=models.CASCADE)

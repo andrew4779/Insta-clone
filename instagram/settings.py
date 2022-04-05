@@ -17,8 +17,6 @@ import django_heroku
 import dj_database_url
 
 
-
-
 # cloudinary
 import cloudinary
 import cloudinary.uploader

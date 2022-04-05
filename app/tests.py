@@ -11,8 +11,8 @@ class ImageTestCase(TestCase):
         # create a user
         user = User.objects.create(
             username='test_user',
-            first_name='Andrew',
-            last_name='Kimani'
+            first_name='mzee',
+            last_name='mzima'
         )
         Image.objects.create(
             image_name='test_image',
@@ -24,5 +24,3 @@ class ImageTestCase(TestCase):
     def test_image_name(self):
         image = Image.objects.get(image_name='test_image')
         self.assertEqual(image.image_name, 'test_image')
-
-
